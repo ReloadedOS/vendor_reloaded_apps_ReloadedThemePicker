@@ -1,4 +1,4 @@
-package co.aospa.android.customization.module
+package com.reloaded.android.customization.module
 
 import android.app.Activity
 
@@ -21,7 +21,7 @@ import com.android.customization.model.themedicon.domain.interactor.ThemedIconIn
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconSnapshotRestorer
 import com.android.customization.module.ThemePickerInjector
 
-public class AospaThemePickerInjector : ThemePickerInjector() {
+public class ReloadedThemePickerInjector : ThemePickerInjector() {
 
     private var customizationSections: CustomizationSections? = null
 
@@ -37,7 +37,7 @@ public class AospaThemePickerInjector : ThemePickerInjector() {
 
     override fun getCustomizationSections(activity: ComponentActivity): CustomizationSections {
         return customizationSections
-            ?: AospaCustomizationSections(
+            ?: ReloadedCustomizationSections(
                     getColorPickerViewModelFactory(
                         context = activity,
                         wallpaperColorsViewModel = getWallpaperColorsViewModel(),
